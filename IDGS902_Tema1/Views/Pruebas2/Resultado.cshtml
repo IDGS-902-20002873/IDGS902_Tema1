@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Resultado";
+}
+
+<h2>Resultado</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h3>Suma: @ViewBag.Suma</h3>
+            <br />
+            <h3>Promedio: @ViewBag.Promedio</h3>
+            <br />
+            <h3>
+                Números repetidos:
+                @foreach (var item in ViewBag.Duplicados)
+                {
+                    <span>@item;</span>
+                }
+            </h3>
+            
+        </div>
+    </div>
+</div>

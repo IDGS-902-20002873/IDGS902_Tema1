@@ -1,0 +1,6 @@
+Rojo,Red
+Verde,Green
+Azul,Blue
+Rosa,Pink
+Amarillo,Yellow
+Pelota,Ball

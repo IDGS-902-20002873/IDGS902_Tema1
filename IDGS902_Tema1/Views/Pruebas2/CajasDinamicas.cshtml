@@ -1,0 +1,42 @@
+﻿@model IDGS902_Tema1.Models.CajasDinamicas
+
+@{
+    ViewBag.Title = "CajasDinamicas";
+}
+
+<h2>Cajas Dinamicas</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <form action="/Pruebas2/CajasDinamicas" method="post">
+                <label>Cantidad de cajas:</label>
+                <input type="text" name="numero" value="" />
+                <br /><br />
+                <input type="submit" name="Calcular" value="Mostrar" class="btn btn-success" />
+            </form>
+        </div>
+        <div class="col-lg-6">
+            <h3>Cantidad de cajas: @ViewBag.Numero</h3>
+        </div>
+    </div>
+    <br /><br />
+    @if (@ViewBag.Numero > 0)
+    {
+    <div class="row">
+        <div class="col-lg-6">
+            <form action="/Pruebas2/Resultado" method="post">
+                @for (int i = 0; i < @ViewBag.Numero; i++)
+                {
+
+                    <label>Numero @(i + 1):</label>
+                    <input type="text" name="a" @i value="" />
+                    <br /> <br/>
+                }
+            <input class="btn btn-success" type="submit" name="Calcular" value="Calcular" />
+            </form>
+        </div>
+    </div>
+    }
+</div>
+

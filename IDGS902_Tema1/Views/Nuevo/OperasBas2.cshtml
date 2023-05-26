@@ -1,0 +1,40 @@
+﻿@model IDGS902_Tema1.Models.Calculos
+
+@{
+    ViewBag.Title = "OperasBas2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>OperasBas2</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <form action="/" method="post">
+                <label>Numero1</label>
+                <input type="text" name="Num1" value="" />
+                <br />
+                <label>Numero2</label>
+                <input type="text" name="Num2" value="" />
+                <br />
+                <label>Elige una opcion: </label>
+                <br />
+                <input type="radio" name="Opera" value="1"> Sumar
+                <br />
+                <input type="radio" name="Opera" value="2"> Restar
+                <br />
+                <input type="radio" name="Opera" value="3"> Multiplicar
+                <br />
+                <input type="radio" name="Opera" value="4"> Dividir
+                <br />
+                <input type="submit" name="name" value="Calcular" />
+                <br />
+                <br />
+            </form>
+        </div>
+        <div class="col-lg-6">
+            <h1>La suma es: @ViewBag.Res</h1>
+            <h1>La suma es: @Html.DisplayFor(model => Model.Res)</h1>
+        </div>
+    </div>
+</div>
+

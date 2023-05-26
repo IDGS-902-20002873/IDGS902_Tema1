@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "LeerDatos";
+}
+
+<h2>Palabras del traductor</h2>
+
+<a href="/Traductor/Registrar" class="btn btn-outline-primary mb-3"><i class="bi bi-arrow-left-circle"></i> Regresar</a>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr class="table-dark">
+            <td>
+                Palabra en Español
+            </td>
+            <td>
+                Palabra en Ingles
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in ViewBag.Traductor)
+        {
+            <tr>
+
+                @foreach (var i in item.Split(','))
+                {
+                    <td>
+                        @i
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
